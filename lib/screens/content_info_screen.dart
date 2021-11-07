@@ -48,7 +48,7 @@ class _ContentInfoScreenState extends State<ContentInfoScreen> {
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage(_apiData["coverUrl"]),
+                      image: NetworkImage(_apiData["coverUrl"].toString()),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -58,7 +58,7 @@ class _ContentInfoScreenState extends State<ContentInfoScreen> {
                   child: Text(
                     _apiData["title"]
                         .toString(), //even if the value is null it'll return "null" string
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 25,
                       fontWeight: FontWeight.w600,
